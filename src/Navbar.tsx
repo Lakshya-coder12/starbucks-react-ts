@@ -2,7 +2,7 @@ import React from "react";
 
 interface Props {}
 
-const NavBar: React.FC<Props> = (props) => {
+const Navbar: React.FC<Props> = (props) => {
   return (
     <div className="flex items-center justify-between px-4 py-4">
       <svg
@@ -40,6 +40,6 @@ const NavBar: React.FC<Props> = (props) => {
   );
 };
 
-NavBar.defaultProps = {};
+Navbar.defaultProps = {};
 
-export default NavBar;
+export default Navbar;
