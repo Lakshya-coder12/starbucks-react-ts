@@ -4,9 +4,15 @@ import { AnchorHTMLAttributes } from "react";
 interface Props extends AnchorHTMLAttributes<HTMLAnchorElement> {
   theme?: "white" | "black" | "green";
   children: string;
+  className?: string;
 }
 
-const RoundedLink: React.FC<Props> = ({ theme, children, ...rest }) => {
+const RoundedLink: React.FC<Props> = ({
+  theme,
+  children,
+  className,
+  ...rest
+}) => {
   let themeClasses =
     theme === "white"
       ? "text-white border-white "
@@ -19,7 +25,8 @@ const RoundedLink: React.FC<Props> = ({ theme, children, ...rest }) => {
       {...rest}
       className={
         "flex-shrink-0 px-4 py-1.75 text-sm border font-semibold rounded-full " +
-        themeClasses
+        themeClasses +
+        className
       }
     >
       {children}
@@ -29,6 +36,7 @@ const RoundedLink: React.FC<Props> = ({ theme, children, ...rest }) => {
 
 RoundedLink.defaultProps = {
   theme: "black",
+  className: "",
 };
 
 export default RoundedLink;
