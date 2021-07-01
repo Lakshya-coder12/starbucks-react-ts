@@ -3,6 +3,7 @@ import "./index.css";
 import Navbar from "./Navbar";
 import Header from "./Header";
 import HeroSection from "./HeroSection";
+import GettingStartedSection from "./GettingStartedSection";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Header />
       <HeroSection />
+      <GettingStartedSection />
     </div>
   );
 }
