@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Header from "./Header";
 import HeroSection from "./HeroSection";
 import GettingStartedSection from "./GettingStartedSection";
+import FavoritesSection from "./FavoritesSection";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <HeroSection />
       <GettingStartedSection />
+      <FavoritesSection />
     </div>
   );
 }
