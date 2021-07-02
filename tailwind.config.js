@@ -37,6 +37,9 @@ module.exports = {
       letterSpacing: {
         lessTight: "-0.009em",
       },
+      height: {
+        39: "9.875rem",
+      },
     },
   },
   variants: {
