@@ -6,6 +6,7 @@ import HeroSection from "./HeroSection";
 import GettingStartedSection from "./GettingStartedSection";
 import FavoritesSection from "./FavoritesSection";
 import EndlessExtrasSection from "./EndlessExtrasSection";
+import StarRewards from "./StarRewards";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <GettingStartedSection />
       <FavoritesSection />
       <EndlessExtrasSection />
+      <StarRewards />
     </div>
   );
 }
