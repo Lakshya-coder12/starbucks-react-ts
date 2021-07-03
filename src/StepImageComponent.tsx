@@ -1,12 +1,13 @@
-import React, { ImgHTMLAttributes } from "react";
 import H3 from "./H3";
+import Image from "./Image";
 
-interface Props extends ImgHTMLAttributes<HTMLImageElement> {
+interface Props {
   className?: string;
   heading: string;
   children: React.ReactNode;
   alt: string;
   src: string;
+  ImgClass: string;
 }
 
 const StepImageComponent: React.FC<Props> = ({
@@ -15,14 +16,14 @@ const StepImageComponent: React.FC<Props> = ({
   children,
   alt,
   src,
-  ...rest
+  ImgClass,
 }) => {
   return (
     <div className={"flex " + className}>
-      <img className="w-30 h-28 pr-4" alt={alt} src={src} {...rest} />
+      <Image src={src} alt={alt} className={ImgClass}></Image>
       <div>
         <H3>{heading}</H3>
-        <div className="pt-4 text-sm pb-8">{children}</div>
+        <div className="pt-4 pb-8 text-sm">{children}</div>
       </div>
     </div>
   );
