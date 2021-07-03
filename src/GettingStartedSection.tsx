@@ -15,6 +15,7 @@ const GettingStartedSection: React.FC<Props> = (props) => {
       <div className="pt-12">
         <StepComponent heading="Download the Starbucks&reg; app" stepNumber={1}>
           <UnderlinedLink
+            externalLink={false}
             theme="green"
             href="https://starbucks.app.link/VLa2I3inh9"
           >
@@ -23,6 +24,7 @@ const GettingStartedSection: React.FC<Props> = (props) => {
           to get access to the full range of Starbucks&reg; Rewards benefits.
           You can also{" "}
           <UnderlinedLink
+            externalLink={false}
             theme="green"
             href="https://www.starbucks.com/account/create"
           >
@@ -38,6 +40,7 @@ Order and pay how you’d like"
           Use cash, credit/debit card or save some time and pay right through
           the app. You’ll collect Stars all ways.{" "}
           <UnderlinedLink
+            externalLink={false}
             theme="green"
             href="https://www.starbucks.com/rewards#waystopay"
           >

@@ -28,6 +28,7 @@ const HeroSection: React.FC<Props> = (props) => {
           <UnderlinedLink
             className="mt-4 "
             href="https://www.starbucks.com/account/create"
+            externalLink={false}
           >
             Or join online
           </UnderlinedLink>
