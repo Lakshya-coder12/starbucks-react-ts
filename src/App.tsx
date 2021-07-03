@@ -8,6 +8,7 @@ import FavoritesSection from "./FavoritesSection";
 import EndlessExtrasSection from "./EndlessExtrasSection";
 import StarRewards from "./StarRewards";
 import StarCodes from "./StarCodes";
+import RestrictionsSection from "./RestrictionsSection";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <EndlessExtrasSection />
       <StarRewards />
       <StarCodes />
+      <RestrictionsSection />
     </div>
   );
 }
