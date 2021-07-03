@@ -12,6 +12,7 @@ module.exports = {
         400: "#1e3932",
       },
       secondary: "#f3f1e7",
+      "terms-section": "#f7f7f7",
       gray: colors.gray,
       white: colors.white,
       black: colors.black,
