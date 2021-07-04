@@ -3,7 +3,7 @@ import { AnchorHTMLAttributes } from "react";
 
 interface Props extends AnchorHTMLAttributes<HTMLAnchorElement> {
   theme?: "white" | "black" | "green";
-  children: string;
+  children: React.ReactNode;
   className?: string;
 }
 
