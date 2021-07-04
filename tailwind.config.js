@@ -31,6 +31,7 @@ module.exports = {
       },
       padding: {
         1.75: "0.4375rem",
+        3.75: "0.938rem",
       },
       margin: {
         18: "4.5rem",
@@ -40,6 +41,10 @@ module.exports = {
       },
       height: {
         39: "9.875rem",
+      },
+      inset: {
+        22: "5.5rem",
+        26: "6.5rem",
       },
     },
   },
