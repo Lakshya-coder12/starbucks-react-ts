@@ -1,12 +1,13 @@
 import React from "react";
+import RoundedLink from "./RoundedLink";
 
 interface Props {}
 
 const Navbar: React.FC<Props> = (props) => {
   return (
-    <div className="flex items-center justify-between px-4 py-4">
+    <div className="flex items-center justify-between p-4 md:px-8 lg:px-10 md:py-0 md:justify-start ">
       <svg
-        className="w-9 h-9"
+        className="flex-shrink-0 w-9 h-9 md:h-12 md:w-12"
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
         height="100%"
@@ -24,7 +25,7 @@ const Navbar: React.FC<Props> = (props) => {
       </svg>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="w-6 h-6"
+        className="w-6 h-6 md:hidden"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -36,6 +37,67 @@ const Navbar: React.FC<Props> = (props) => {
           d="M4 6h16M4 12h16M4 18h16"
         />
       </svg>
+      <ul className="flex-shrink-0 hidden md:flex ">
+        <a
+          className="hover:text-primary-300"
+          href="https://www.starbucks.com/menu"
+        >
+          <li className="pl-10 pr-6 text-sm font-bold tracking-widest lg:py-10 md:py-8">
+            MENU
+          </li>{" "}
+        </a>
+        <a
+          className="hover:text-primary-300"
+          href="https://www.starbucks.com/rewards"
+        >
+          <li className="text-sm font-bold tracking-widest border-b-4 lg:py-10 md:py-8 border-primary-300">
+            REWARDS
+          </li>
+        </a>
+        <a
+          className="hover:text-primary-300"
+          href="https://www.starbucks.com/gift"
+        >
+          <li className="pl-6 text-sm font-bold tracking-widest lg:py-10 md:py-8">
+            GIFT CARDS
+          </li>
+        </a>
+      </ul>
+      <div className="flex-shrink-0 hidden ml-auto md:block">
+        <div className="flex items-center ml-10">
+          <a
+            className="flex items-center pr-2 text-sm font-semibold hover:text-primary-300"
+            href="https://www.starbucks.com/store-locator"
+          >
+            {" "}
+            <svg
+              viewBox="0 0 24 24"
+              preserveAspectRatio="xMidYMid meet"
+              aria-hidden="true"
+              focusable="false"
+              className="w-8 h-8 pr-2"
+              fill="currentcolor"
+            >
+              <path d="M12,11.475 C10.5214286,11.475 9.32142857,10.299 9.32142857,8.85 C9.32142857,7.401 10.5214286,6.225 12,6.225 C13.4785714,6.225 14.6785714,7.401 14.6785714,8.85 C14.6785714,10.299 13.4785714,11.475 12,11.475 M12,1.5 C7.85357143,1.5 4.5,4.7865 4.5,8.85 C4.5,14.3625 12,22.5 12,22.5 C12,22.5 19.5,14.3625 19.5,8.85 C19.5,4.7865 16.1464286,1.5 12,1.5"></path>
+            </svg>
+            Find a store
+          </a>
+          <RoundedLink
+            theme="black"
+            className="ml-10 mr-4"
+            href="https://www.starbucks.com/rewards"
+          >
+            Sign in
+          </RoundedLink>
+          <RoundedLink
+            theme="white"
+            className="bg-black"
+            href="https://www.starbucks.com/account/create"
+          >
+            Join now
+          </RoundedLink>
+        </div>
+      </div>
     </div>
   );
 };
