@@ -5,7 +5,7 @@ interface Props {}
 
 const Navbar: React.FC<Props> = (props) => {
   return (
-    <div className="flex items-center justify-between p-4 md:px-8 lg:px-10 md:py-0 md:justify-start ">
+    <div className="flex items-center justify-between p-4 bg-white md:px-8 lg:px-10 md:py-0 md:justify-start md:sticky md:top-0 md:z-20">
       <svg
         className="flex-shrink-0 w-9 h-9 md:h-12 md:w-12"
         xmlns="http://www.w3.org/2000/svg"
