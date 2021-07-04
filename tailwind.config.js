@@ -23,6 +23,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         hero: "url('./img/hero-img.webp')",
+        "hero-large": "url('./img/hero-img-large.webp')",
       },
       fontSize: {
         13: "0.8125rem",
