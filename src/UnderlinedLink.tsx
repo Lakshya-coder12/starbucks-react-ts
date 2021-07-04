@@ -3,7 +3,7 @@ import { AnchorHTMLAttributes } from "react";
 
 interface Props extends AnchorHTMLAttributes<HTMLAnchorElement> {
   theme?: "green";
-  children: string;
+  children: React.ReactNode;
   className?: string;
   externalLink: boolean;
 }
@@ -22,7 +22,7 @@ const UnderlinedLink: React.FC<Props> = ({
       <a
         {...rest}
         className={
-          "flex-shrink-0 underline hover:no-underline" + themeClass + className
+          "flex-shrink-0 underline hover:no-underline " + themeClass + className
         }
       >
         {children}
@@ -41,6 +41,8 @@ const UnderlinedLink: React.FC<Props> = ({
   );
 };
 
-UnderlinedLink.defaultProps = {};
+UnderlinedLink.defaultProps = {
+  className: "",
+};
 
 export default UnderlinedLink;
