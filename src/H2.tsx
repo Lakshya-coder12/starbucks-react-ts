@@ -6,7 +6,11 @@ interface Props {
 }
 
 const H2: React.FC<Props> = ({ children, className }) => {
-  return <h2 className={"text-2xl font-semibold " + className}>{children}</h2>;
+  return (
+    <h2 className={"text-2xl md:text-2.5xl font-semibold " + className}>
+      {children}
+    </h2>
+  );
 };
 
 H2.defaultProps = {
