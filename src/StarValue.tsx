@@ -3,12 +3,18 @@ import React from "react";
 interface Props {
   value: number;
   className?: string;
+  textSize: string;
 }
 
-const StarValue: React.FC<Props> = ({ value, className }) => {
+const StarValue: React.FC<Props> = ({ value, className, textSize }) => {
   return (
-    <div className={"flex items-center p-2 pb-4 " + className}>
-      <span className="font-semibold text-19">{value}</span>
+    <div
+      className={
+        "flex items-center justify-center p-2 pb-4 md:px-8 md:pt-4 md:pb-6" +
+        className
+      }
+    >
+      <span className={"font-semibold " + textSize}>{value}</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="w-3 h-3"
