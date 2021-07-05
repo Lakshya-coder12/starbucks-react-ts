@@ -15,15 +15,17 @@ const StepComponent: React.FC<Props> = ({
   className,
 }) => {
   return (
-    <div className={"flex " + className}>
-      <div className="pr-4">
-        <div className="w-12 h-12 text-center flex items-center justify-center text-2xl text-primary-400 border-2 border-primary-300 rounded-full font-semibold">
+    <div className={"flex md:flex-col md:items-center " + className}>
+      <div className="pr-4 md:pr-0">
+        <div className="flex items-center justify-center w-12 h-12 text-2xl font-semibold text-center border-2 rounded-full text-primary-300 border-primary-300">
           {stepNumber}
         </div>
       </div>
       <div>
-        <H3>{heading}</H3>
-        <div className="pt-4 text-sm">{children}</div>
+        <H3 className="md:text-center md:pt-6 md:text-19">{heading}</H3>
+        <div className="pt-4 text-sm md:text-center md:text-base">
+          {children}
+        </div>
       </div>
     </div>
   );
