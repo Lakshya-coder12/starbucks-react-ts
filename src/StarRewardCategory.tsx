@@ -22,7 +22,8 @@ const StarRewardCategory: React.FC<Props> = ({
         heading={h3}
         src={src}
         alt={alt}
-        ImgClass=" w-32 h-39 "
+        ImgClass="w-32 h-39"
+        applyMediaQueries={false}
       >
         {children}
       </StepImageComponent>
