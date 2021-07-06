@@ -8,6 +8,7 @@ interface Props {
   alt: string;
   src: string;
   ImgClass: string;
+  applyMediaQueries: boolean;
 }
 
 const StepImageComponent: React.FC<Props> = ({
@@ -17,13 +18,24 @@ const StepImageComponent: React.FC<Props> = ({
   alt,
   src,
   ImgClass,
+  applyMediaQueries,
 }) => {
+  let outerDiv = "";
+  let innerDiv = "";
+  let h3 = "";
+  if (applyMediaQueries === true) {
+    outerDiv = " md:flex-col md:items-center ";
+    innerDiv = "md:text-center";
+    h3 = "md:pt-6 md:text-center";
+  }
   return (
-    <div className={"flex " + className}>
+    <div className={"flex " + outerDiv + className}>
       <Image src={src} alt={alt} className={ImgClass}></Image>
       <div>
-        <H3>{heading}</H3>
-        <div className="pt-4 pb-8 text-sm">{children}</div>
+        <H3 className={"md:text-19 " + h3}>{heading}</H3>
+        <div className={"pt-4 pb-8 text-sm md:text-base " + innerDiv}>
+          {children}
+        </div>
       </div>
     </div>
   );
